@@ -1,0 +1,13 @@
+var firstUniqChar = function(s) {
+    if (typeof s != 'string') return;
+    if (s == "") return -1;
+    var tempArr = s.split('');
+    var index = -1;
+    for (var i = 0; i < tempArr.length; i++) {
+        if (s.indexOf(tempArr[i]) == s.lastIndexOf(tempArr[i])) {
+            index = i;
+            break;
+        }
+    }
+    return index;
+};
